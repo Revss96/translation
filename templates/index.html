@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech and Text Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- <h1 class="title">🎤 Real-Time Speech-to-Text Translation & Sentiment Analysis Using NLP 🌍</h1> -->
+        
+        <!-- Text Input Section -->
+        <div class="section input-section">
+            <h2>📝 Manual Text Input</h2>
+            <textarea id="textInput" rows="4" cols="50" placeholder="Enter text here..."></textarea>
+            <select id="textLanguageSelect">
+                <option value="en">English</option>
+                <option value="ta">Tamil</option>
+                <option value="es">Spanish</option>
+                <option value="te">Telugu</option>
+                <option value="ml">Malayalam</option>
+                <option value="ja">Japanese</option>
+                <option value="kn">Kannada</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+            </select>
+            <button id="translateTextButton" class="button">🔄 Translate Text</button>
+        </div>
+        
+        <!-- Speech Input Section -->
+        <div class="section input-section">
+            <h2>🎙️ Speech Input</h2>
+            <button id="startRecordingButton" class="button">🎙️ Start Recording</button>
+            <select id="speechLanguageSelect">
+                <option value="en">English</option>
+                <option value="ta">Tamil</option>
+                <option value="es">Spanish</option>
+                <option value="te">Telugu</option>
+                <option value="ml">Malayalam</option>
+                <option value="ja">Japanese</option>
+                <option value="kn">Kannada</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+            </select>
+        </div>
+        
+        <!-- Results -->
+        <div class="section results-section">
+            <h2>📜 Results:</h2>
+            <p><strong>Original Text:</strong> <span id="originalText"></span></p>
+            <p><strong>Translated Text:</strong> <span id="translatedText"></span></p>
+            <p><strong>Sentiment:</strong> <span id="sentiment"></span></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
